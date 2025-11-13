@@ -1,0 +1,28 @@
+experiment:
+  name: "val"
+  seed: 90
+  type: "MI"
+  log_file: "experiment.log"
+
+plot_stats: True
+grid: True # if grid is true, the folder name will be appended with _grid
+grid_params:
+  start: 10
+  stop: 300
+  num: 34
+
+number_meta_datapoints: 2
+n_row_range: [10, 500]
+
+n_dim: '2-32'
+
+meta_distribution:
+  - "multi_normal-dense-base"
+  - "multi_normal-dense-wigglify"
+  - "multi_normal-sparse-base"
+  - "multi_normal-lvm-wigglify"
+  - "multi_student-dense-base"
+  - "multi_student-sparse-halfcube"
+  - "multi_student-sparse-base"
+  - "multi_student-2pair-halfcube"
+  - "multi_additive_noise-wigglify"

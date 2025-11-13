@@ -1,0 +1,9 @@
+seed: 123
+device: auto
+dataset_path: data/test_imd_data_grid
+
+infer:
+  mode: qcqr_calib        # point | bootstrap | qcqr_calib
+  n_resamples: 20    # for bootstrap/qcqr_calib
+  alpha: 0.05
+  tau: 0.5           # if QCQR model

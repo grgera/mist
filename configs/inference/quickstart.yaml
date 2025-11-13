@@ -1,0 +1,17 @@
+loss_type: "QCQR"
+
+architecture:
+  max_input_dim: 64 # length of maximum expected vector (n_dim. 64 means that the max n_dim is 32 in order to compare two samples)
+  n_phi_layers: 3
+  n_dec_layers: 1
+  phi_hidden_dim: 256
+  n_phi_heads: 8
+  phi_dim_forward: 512
+  phi_activation_fun: gelu
+  n_rho_layers: 2
+  rho_hidden_dim: 256
+  n_inds: 64
+  phi_model: set_transformer
+  quantile_conditioned: True # for QCQR must be True
+  sab_stack_layers: 2
+  n_seeds: 5

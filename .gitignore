@@ -1,0 +1,116 @@
+# ==========================================
+#   Core Python ignores
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.DS_Store
+
+# ==========================================
+#   Packaging / distribution
+# ==========================================
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ==========================================
+#   Virtual environments
+# ==========================================
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# ==========================================
+#   IDEs / editors
+# ==========================================
+.idea/
+.vscode/
+.spyderproject
+.spyproject
+.ropeproject
+.pybuilder/
+target/
+
+# ==========================================
+#   Logs / runtime / coverage
+# ==========================================
+*.log
+logs/
+wandb/
+lightning_logs/
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.pyre/
+.pytype/
+.dmypy.json
+.dmypy.json
+.dmypy.json
+
+# ==========================================
+#   Checkpoints / models / datasets
+# ==========================================
+checkpoints/
+runs/
+outputs/
+models/
+*.pt
+*.pth
+*.bin
+*.ckpt
+*.npz
+*.npy
+*.pkl
+*.h5
+*.csv
+*.jsonl
+data/
+datasets/
+.ipynb_checkpoints/
+
+# ==========================================
+#   Jupyter / notebooks
+# ==========================================
+*.ipynb
+.ipynb_checkpoints/
+
+# ==========================================
+#   Docs / build
+# ==========================================
+docs/_build/
+site/
+
+# ==========================================
+#   Other tool-specific
+# ==========================================
+.pdm.toml
+.pdm-python
+.pdm-build/
+.pypirc

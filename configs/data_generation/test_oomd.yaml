@@ -1,0 +1,27 @@
+experiment:
+  name: "test_oomd_data"
+  seed: 90
+  type: "MI"
+  log_file: "experiment.log"
+
+plot_stats: True
+grid: True # if grid is true, the folder name will be appended with _grid
+grid_params:
+  start: 10
+  stop: 500
+  num: 20
+
+number_meta_datapoints: 9
+n_row_range: [30, 300]
+
+n_dim: '2-32'
+
+#out
+meta_distribution:
+  - "multi_normal-dense-wigglify"
+  - "multi_normal-sparse-halfcube"
+  - "multi_normal-sparse-asinh"
+  - "multi_student-sparse-wigglify"
+  - "multi_student-dense-halfcube"
+  - "multi_additive_noise-base"
+  - "multi_additive_noise-halfcube"
