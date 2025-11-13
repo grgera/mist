@@ -1,9 +1,12 @@
 seed: 123
 device: auto
-dataset_path: data/test_imd_data_grid
+dataset_path: data/test_imd_data
 
 infer:
-  mode: qcqr_calib        # point | bootstrap | qcqr_calib
-  n_resamples: 20    # for bootstrap/qcqr_calib
+  mode: bootstrap     # bootstrap | qcqr_calib
+  n_resamples: 3  
   alpha: 0.05
-  tau: 0.5           # if QCQR model
+  tau: 0.5             # if QCQR model
+  quantiles: null      # or a list, e.g. [0.05, 0.25, ..., 0.95]
+datamodule:
+  filter_dim: null     # optional: filter meta-datapoints by "dimension"

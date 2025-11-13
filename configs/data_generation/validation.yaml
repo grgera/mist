@@ -1,5 +1,5 @@
 experiment:
-  name: "val"
+  name: "val_data"
   seed: 90
   type: "MI"
   log_file: "experiment.log"

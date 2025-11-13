@@ -1,0 +1,12 @@
+name: "bmi_baselines"
+
+data:
+  test_folder: data/test_imd_data
+
+# to compute bias, variance, and ci coverage
+n_resamples: 3
+ci_alpha: 0.05
+
+estimators_to_run:
+  - "CCA"
+  - "KSG"

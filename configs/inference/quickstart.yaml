@@ -1,17 +1,26 @@
-loss_type: "QCQR"
-
 architecture:
   max_input_dim: 64 # length of maximum expected vector (n_dim. 64 means that the max n_dim is 32 in order to compare two samples)
-  n_phi_layers: 3
+  n_phi_layers: 2
   n_dec_layers: 1
   phi_hidden_dim: 256
-  n_phi_heads: 8
-  phi_dim_forward: 512
+  n_phi_heads: 16
+  phi_dim_forward: 1024
   phi_activation_fun: gelu
-  n_rho_layers: 2
+  n_rho_layers: 3
   rho_hidden_dim: 256
-  n_inds: 64
+  n_inds: 32
   phi_model: set_transformer
-  quantile_conditioned: True # for QCQR must be True
+  quantile_conditioned: False # will be automatically replaced in quickstart.py code
   sab_stack_layers: 2
-  n_seeds: 5
+  n_seeds: 10
+optimizer:
+  eps: 8.0e-09
+  lr: 0.00011273672514291846
+  swa_lr: null
+  weight_decay: 8.653769674748101e-06
+  scheduler:
+    name: on_plateau
+    mode: min
+    metric: train_loss
+    patience: 3
+    min_lr: 5.0e-06
