@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://raw.githubusercontent.com/grgera/mist/docs/images/mist_logo.png" width="50%" alt='mist'>
+<img src="https://raw.githubusercontent.com/grgera/mist/blob/main/docs/images/mist_logo.png" width="50%" alt='mist'>
 </p>
 
 **M**utual **I**nformation estimation via **S**upervised **T**raining
