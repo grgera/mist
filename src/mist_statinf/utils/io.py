@@ -30,7 +30,7 @@ def load_quickstart_cfg(config_path: Optional[str]) -> dict:
         return OmegaConf.to_container(cfg, resolve=True)  # type: ignore
     # package resource: configs/inference/quickstart.yaml
     with resources.as_file(
-        resources.files("configs").joinpath("inference", "quickstart.yaml")
+        resources.files("configs").joinpath("inference").joinpath("quickstart.yaml")
     ) as p:
         cfg = OmegaConf.load(str(p))
     return OmegaConf.to_container(cfg, resolve=True)  # type: ignore
