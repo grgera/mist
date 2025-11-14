@@ -77,21 +77,17 @@ htmlcov/
 # ==========================================
 #   Checkpoints / models / datasets
 # ==========================================
-checkpoints/
 runs/
 outputs/
 models/
 *.pt
 *.pth
 *.bin
-*.ckpt
 *.npz
 *.npy
 *.pkl
 *.h5
-*.csv
 *.jsonl
-data/
 datasets/
 .ipynb_checkpoints/
 

@@ -1,0 +1,39 @@
+args:
+  name: st_mi_mse
+  seed: 1234
+  loss_type: QCQR
+  architecture:
+    max_input_dim: 64
+    n_phi_layers: 2
+    n_dec_layers: 1
+    phi_hidden_dim: 256
+    n_phi_heads: 16
+    phi_dim_forward: 1024
+    phi_activation_fun: gelu
+    n_rho_layers: 3
+    rho_hidden_dim: 256
+    n_inds: 32
+    phi_model: set_transformer
+    quantile_conditioned: true
+    sab_stack_layers: 2
+    n_seeds: 10
+  optimizer:
+    eps: 8.0e-09
+    lr: 0.00011273672514291846
+    swa_lr: null
+    weight_decay: 8.653769674748101e-06
+    scheduler:
+      name: on_plateau
+      mode: min
+      metric: train_loss
+      patience: 3
+      min_lr: 5.0e-06
+  datamodule:
+    train_folder: data/train_part
+    val_folder: data/validation_part/val_grid
+    test_folder: data/test_part/test_imd_grid
+    batch_size: 256
+  trainer:
+    max_epochs: 30
+    gradient_clip_val: 1
+output_filepath: logs/st_mi_mse/run_20250917-104008/test_predictions.jsonl
