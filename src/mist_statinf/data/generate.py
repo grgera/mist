@@ -112,7 +112,6 @@ def generate_main(config_path: str, version: str = ""):
     cfg: DictConfig = OmegaConf.load(config_path)
     name = cfg['experiment']['name']
     fname = name + (f"_{version}" if version else "")
-    if cfg.get("grid"): fname += "_grid"
     output_dir = os.path.join("data", fname)
 
     logger = setup_logging(output_dir, cfg['experiment'].get('log_file',"experiment.log"))
