@@ -10,8 +10,7 @@
 It leverages neural networks trained on large meta-datasets of distributions to learn flexible, differentiable MI estimators that generalize across sample sizes, dimensions, and modalities.
 The framework supports uncertainty quantification via quantile regression and provides fast, well-calibrated inference suitable for integration into modern ML pipelines.
 
-This repository contains the reference implementation for the preprint *"MIST: Mutual Information via Supervised Training"*.  
-It includes scripts to reproduce our experiments as well as tools for training and evaluating MIST-style MI estimators.
+This repository contains the reference implementation for the preprint *"MIST: Mutual Information via Supervised Training"*.  It includes scripts to reproduce our experiments as well as tools for training and evaluating MIST-style MI estimators.
 
 
 ## Installation
@@ -108,7 +107,7 @@ which quantiles to compute.
 
 Below we show the results we obtained on **M_test**:
 <p align="center">
-<img src="https://github.com/grgera/mist/blob/main/docs/images/m_test_results.jpg?raw=true" width="50%" alt='mist'>
+<img src="https://github.com/grgera/mist/blob/main/docs/images/m_test_results.jpg?raw=true" width="95%" alt='mist'>
 </p>
 
 
