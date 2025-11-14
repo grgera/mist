@@ -44,7 +44,6 @@ If you want to evaluate MI or obtain confidence intervals on your own data using
 
 ### Point MI estimate with a **MIST**
 ```python
-import numpy as np
 from mist_statinf import MISTQuickEstimator
 
 X, Y = <your data>
@@ -60,7 +59,6 @@ print("MIST estimate:", mi)
 
 ### Median MI estimate and quantile-based confidence intervals with **MIST-QR**
 ```python
-import numpy as np
 from mist_statinf import MISTQuickEstimator 
 
 X, Y = <your data>
@@ -98,7 +96,7 @@ mist-statinf get-data --preset m_test_oomd --dir data/test_oomd_data
 
 The simplest way to run inference on these datasets is:
 ```bash
-mist-statinf infer configs/inference/mist_inference.yaml --ckpt_dir "checkpoints/mist/" 
+mist-statinf infer configs/inference/mist_inference.yaml "checkpoints/mist/" 
 ```
 
 > **_NOTE:_**  The file `mist_inference.yaml` allows you to configure the evaluation mode
@@ -138,7 +136,7 @@ Baseline results, logs, and configs will be saved to: `logs/bmi_baselines`.
 
 ### 3. Test Stage
 ```bash
-mist-statinf infer configs/inference/mist_inference.yaml --ckpt_dir "logs/mist_train/run_YYYYmmdd-HHMMSS"
+mist-statinf infer configs/inference/mist_inference.yaml "logs/mist_train/run_YYYYmmdd-HHMMSS"
 ```
 This will produce CSV predictions and a JSON summary in the same run directory: `logs/mist_train/run_YYYYmmdd-HHMMSS`.
 
