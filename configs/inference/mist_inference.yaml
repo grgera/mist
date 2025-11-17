@@ -4,7 +4,7 @@ dataset_path: data/test_imd_data
 
 infer:
   mode: bootstrap     # bootstrap | qcqr_calib
-  n_resamples: 3  
+  n_resamples: 50  
   alpha: 0.05
   tau: 0.5             # if QCQR model
   quantiles: null      # or a list, e.g. [0.05, 0.25, ..., 0.95]

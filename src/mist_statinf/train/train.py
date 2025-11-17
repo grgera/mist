@@ -52,7 +52,7 @@ def run(config: DictConfig) -> Dict[str, Any]:
     logger.info("Instantiating DataModule")
     datamodule = MetaStatDataModule(**config["datamodule"])
 
-    # --- Модель
+    # --- Model
     logger.info("Instantiating Lightning model")
     model = MISTModelLit(config, output_filepath=os.path.join(output_dir, "test_predictions.jsonl"))
 

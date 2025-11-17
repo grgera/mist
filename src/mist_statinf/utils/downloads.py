@@ -9,29 +9,29 @@ BUFFER = 1024 * 1024  # 1 MB chunks
 
 PRESETS: Dict[str, Dict[str, Tuple[str, Optional[str]]]] = {
     "m_test_imd": {
-        "M_test_imd_dataset.pkl": ("https://zenodo.org/records/14452998/files/AOD_Districts.csv", None),
-        "M_test_imd_meta_info.json":   ("https://zenodo.org/records/14452998/files/AOD_Districts.csv",   None),
-        "M_test_imd_config.yaml":  ("https://zenodo.org/records/14452998/files/AOD_Districts.csv",  None),
+        "M_test_imd_dataset.pkl": ("https://zenodo.org/records/17599669/files/M_test_imd_dataset.pkl", None),
+        "M_test_imd_meta_info.json":   ("https://zenodo.org/records/17599669/files/M_test_imd_meta_info.json",   None),
+        "M_test_imd_config.yaml":  ("https://zenodo.org/records/17599669/files/M_test_imd_config.yaml",  None),
     },
     "m_test_oomd": {
-        "M_test_oomd_dataset.pkl": ("https://zenodo.org/records/14452998/files/AOD_Districts.csv", None),
-        "M_test_oomd_meta_info.json":   ("https://zenodo.org/records/14452998/files/AOD_Districts.csv",   None),
-        "M_test_oomd_config.yaml":  ("https://zenodo.org/records/14452998/files/AOD_Districts.csv",  None),
+        "M_test_oomd_dataset.pkl": ("https://zenodo.org/records/17599669/files/M_test_oomd_dataset.pkl", None),
+        "M_test_oomd_meta_info.json":   ("https://zenodo.org/records/17599669/files/M_test_oomd_meta_info.json",   None),
+        "M_test_oomd_config.yaml":  ("https://zenodo.org/records/17599669/files/M_test_oomd_config.yaml",  None),
     },
     "m_test_extended_imd": {
-        "M_test_extended_imd_dataset.pkl": ("https://zenodo.org/records/14452998/files/AOD_Districts.csv", None),
-        "M_test_extended_imd_meta_info.json":   ("https://zenodo.org/records/14452998/files/AOD_Districts.csv",   None),
-        "M_test_extended_imd_config.yaml":  ("https://zenodo.org/records/14452998/files/AOD_Districts.csv",  None),
+        "M_test_extended_imd_dataset.pkl": ("https://zenodo.org/records/17599669/files/M_test_extended_imd_dataset.pkl", None),
+        "M_test_extended_imd_meta_info.json":   ("https://zenodo.org/records/17599669/files/M_test_extended_imd_meta_info.json",   None),
+        "M_test_extended_imd_config.yaml":  ("https://zenodo.org/records/17599669/files/M_test_extended_imd_config.yaml",  None),
     },
     "m_test_extended_oomd": {
-        "M_test_extended_oomd_dataset.pkl": ("https://zenodo.org/records/14452998/files/AOD_Districts.csv", None),
-        "M_test_extended_oomd_meta_info.json":   ("https://zenodo.org/records/14452998/files/AOD_Districts.csv",   None),
-        "M_test_extended_oomd_config.yaml":  ("https://zenodo.org/records/14452998/files/AOD_Districts.csv",  None),
+        "M_test_extended_oomd_dataset.pkl": ("https://zenodo.org/records/17599669/files/M_test_extended_oomd_dataset.pkl", None),
+        "M_test_extended_oomd_meta_info.json":   ("https://zenodo.org/records/17599669/files/M_test_extended_oomd_meta_info.json",   None),
+        "M_test_extended_oomd_config.yaml":  ("https://zenodo.org/records/17599669/files/M_test_extended_oomd_config.yaml",  None),
     },
     "m_train": {
-        "M_train_dataset.pkl": ("https://zenodo.org/records/14452998/files/AOD_Districts.csv", None),
-        "M_train_meta_info.json":   ("https://zenodo.org/records/14452998/files/AOD_Districts.csv",   None),
-        "M_train_config.yaml":  ("https://zenodo.org/records/14452998/files/AOD_Districts.csv",  None),
+        "M_train_dataset.pkl": ("https://zenodo.org/records/17599669/files/M_train_meta_dataset.pkl", None),
+        "M_train_meta_info.json":   ("https://zenodo.org/records/17599669/files/M_train_meta_info.json",   None),
+        "M_train_config.yaml":  ("https://zenodo.org/records/17599669/files/M_train_config.yaml",  None),
     },
 }
 

@@ -11,7 +11,7 @@ grid_params:
   stop: 300
   num: 5
 
-number_meta_datapoints: 600000
+number_meta_datapoints: 625000
 n_row_range: [10, 500]
 
 n_dim: '2-32'

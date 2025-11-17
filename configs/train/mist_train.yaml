@@ -36,7 +36,6 @@ datamodule:
   val_folder: data/val_grid
   test_folder: data/test_imd_data
   batch_size: 128
-  num_workers: 0
 
 
 trainer:

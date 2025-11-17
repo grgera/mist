@@ -4,7 +4,7 @@ data:
   test_folder: data/test_imd_data
 
 # to compute bias, variance, and ci coverage
-n_resamples: 3
+n_resamples: 50
 ci_alpha: 0.05
 
 estimators_to_run:
