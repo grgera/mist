@@ -10,7 +10,7 @@
 It leverages neural networks trained on large meta-datasets of distributions to learn flexible, differentiable MI estimators that generalize across sample sizes, dimensions, and modalities.
 The framework supports uncertainty quantification via quantile regression and provides fast, well-calibrated inference suitable for integration into modern ML pipelines.
 
-This repository contains the reference implementation for the preprint *"MIST: Mutual Information via Supervised Training"*.  It includes scripts to reproduce our experiments as well as tools for training and evaluating MIST-style MI estimators.
+This repository contains the reference implementation for the preprint *"Mutual Information via Supervised Training"*.  It includes scripts to reproduce our experiments as well as tools for training and evaluating MIST-style MI estimators.
 
 
 ## Installation
@@ -85,7 +85,7 @@ You can override both the checkpoint and the architecture if you have your own t
 
 If you want to reproduce the experiments from the paper, we recommend evaluating our trained estimators on the provided test sets (**M_test** and **M_test_extended**).
 
-Since the test sets take a considerable amount of storage space, we publish them separately on Zenodo.  
+Since the test sets take a considerable amount of storage space, we publish them separately on [Zenodo](https://zenodo.org/records/17599669).  
 Before running inference, download the desired subset (either `M_test` or `M_test_extended`).  
 Below we show an example using **M_test**, as it is significantly lighter.
 
@@ -152,13 +152,13 @@ If you use **MIST** or **MIST-QR** in your work, please cite:
 
 ```bibtex
 @article{mist2025,
-  title   = {MIST: Mutual Information via Supervised Training},
-  author  = {},
+  title   = {Mutual Information via Supervised Training},
+  author  = {German Gritsai and Megan Richards and Maxime Meloux and Kyunghyun Cho and Maxime Peyrard},
   journal = {arXiv preprint arXiv:XXXX.XXXXX},
-  year    = {2025}
+  year    = {2025},
 }
 ```
 
 ## Authors ##
 
-[German Gritsai](https://github.com/), [Megan Richards](https://github.com/), [Maxime Meloux](https://github.com/), [Kyunghyun Cho](https://github.com/), [Maxime Peyrard](https://github.com/).
+[German Gritsai](https://github.com/), [Megan Richards](https://github.com/meganrichards3), [Maxime Meloux](https://github.com/MelouxM), [Kyunghyun Cho](https://github.com/kyunghyuncho), [Maxime Peyrard](https://github.com/PeyrardM).
