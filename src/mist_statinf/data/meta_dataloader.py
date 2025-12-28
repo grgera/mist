@@ -167,15 +167,15 @@ class MetaStatDataModule(pl.LightningDataModule):
     def _load_dataset(self, folder_path: str) -> MetaStatDataset:
         """Load dataset from folder. Supports single file or multiple parts."""
 
-        pattern = os.path.join(folder_path, "meta_dataset_part*.pkl")
+        pattern = os.path.join(folder_path, "*dataset.pkl")
         part_files = sorted(glob.glob(pattern))
 
         # If no part files, fall back to original single file
         if not part_files:
-            data_path = os.path.join(folder_path, "meta_dataset.pkl")
+            data_path = os.path.join(folder_path, "*dataset.pkl")
             if not os.path.exists(data_path):
                 raise FileNotFoundError(
-                    f"No meta_dataset.pkl or meta_dataset_part*.pkl found in {folder_path}"
+                    f"No *_dataset.pkl found in {folder_path}"
                 )
             with open(data_path, "rb") as f:
                 data = pickle.load(f)

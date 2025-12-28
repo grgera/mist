@@ -100,7 +100,7 @@ def run(config: DictConfig) -> Dict[str, Any]:
 
     # --- Final test on best
     logger.info("Testing best checkpoint")
-    best_model = MISTModelLit.load_from_checkpoint(best_ckpt, args=config)
+    best_model = MISTModelLit.load_from_checkpoint(best_ckpt, args=config, weights_only=False)
     test_results = trainer.test(best_model, datamodule=datamodule)
 
     # --- Summary

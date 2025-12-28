@@ -2,6 +2,8 @@ from __future__ import annotations
 from typing import Optional, Dict, Sequence, Union
 import numpy as np
 import torch
+from pathlib import Path
+import typer
 
 from .train.lit_module import MISTModelLit
 from .model.estimator import MISTModel
@@ -51,6 +53,7 @@ class MISTQuickEstimator:
                     "optimizer": opt,
                     "trainer": {"max_epochs": 1},
                 },
+                weights_only=False,
             )
         else:
             core = MISTModel(**arch)

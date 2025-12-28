@@ -6,6 +6,7 @@ import math
 import os
 import pickle
 import time
+import glob
 from typing import Tuple
 
 import numpy as np
@@ -125,7 +126,12 @@ def run(config: DictConfig) -> None:
 
     # Test loading
     test_folder = config.data.test_folder
-    meta_path = os.path.join(test_folder, "meta_dataset.pkl")
+    matches = glob.glob(os.path.join(test_folder, "*dataset.pkl"))
+    if not matches:
+        raise FileNotFoundError(f"No file matching *dataset.pkl found in: {test_folder}")
+    if len(matches) > 1:
+        raise ValueError(f"Multiple files match *dataset.pkl: {matches}. Expected exactly one.")
+    meta_path = matches[0]
     logger.info(f"Loading meta-dataset: {meta_path}")
     with open(meta_path, "rb") as f:
         test_meta_dataset = pickle.load(f)

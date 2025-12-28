@@ -4,6 +4,7 @@ from pathlib import Path
 
 app = typer.Typer(add_completion=False, help="MIST — neural MI estimator with training, inference, and tools.")
 
+PACKAGE_ROOT = Path(__file__).parent.resolve()
 
 @app.command("train")
 def train(
@@ -12,7 +13,17 @@ def train(
 ):
     """Train a MIST model with PyTorch Lightning."""
     from mist_statinf.train.train import train_main
-    train_main(config, ckpt_out)
+
+    config_path = Path(config)
+    if not config_path.is_absolute():
+        if not config_path.exists():
+            config_path = PACKAGE_ROOT / config_path
+
+    if not config_path.exists():
+        typer.echo(f"Error: Config file not found: {config_path}", err=True)
+        raise typer.Exit(code=1)
+        
+    train_main(str(config_path), ckpt_out)
 
 
 @app.command("infer")
@@ -23,7 +34,17 @@ def infer(
 ):
     """Run inference for a trained MIST model (bootstrap / qcqr_calib modes)."""
     from mist_statinf.infer.inference import infer_main
-    infer_main(config, ckpt_dir, out_path)
+
+    config_path = Path(config)
+    if not config_path.is_absolute():
+        if not config_path.exists():
+            config_path = PACKAGE_ROOT / config_path
+
+    if not config_path.exists():
+        typer.echo(f"Error: Config file not found: {config_path}", err=True)
+        raise typer.Exit(code=1)
+        
+    infer_main(str(config_path), ckpt_dir, out_path)
 
 
 @app.command("baselines")
@@ -32,7 +53,17 @@ def baselines(
 ):
     """Evaluate classic MI baselines (KSG, MINE, InfoNCE, NWJ, CCA) on a meta-dataset."""
     from mist_statinf.train.baselines import baselines_main
-    baselines_main(config)
+
+    config_path = Path(config)
+    if not config_path.is_absolute():
+        if not config_path.exists():
+            config_path = PACKAGE_ROOT / config_path
+
+    if not config_path.exists():
+        typer.echo(f"Error: Config file not found: {config_path}", err=True)
+        raise typer.Exit(code=1)
+        
+    baselines_main(str(config_path))
 
 
 @app.command("generate")
@@ -42,7 +73,17 @@ def generate(
 ):
     """Generate synthetic meta-datasets."""
     from mist_statinf.data.generate import generate_main
-    generate_main(config, version)
+    
+    config_path = Path(config)
+    if not config_path.is_absolute():
+        if not config_path.exists():
+            config_path = PACKAGE_ROOT / config_path
+
+    if not config_path.exists():
+        typer.echo(f"Error: Config file not found: {config_path}", err=True)
+        raise typer.Exit(code=1)
+
+    generate_main(str(config_path), version)
 
 
 @app.command("tune")

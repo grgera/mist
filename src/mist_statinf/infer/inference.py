@@ -39,7 +39,7 @@ def _load_model_from_run_dir(run_dir: str) -> Tuple[MISTModelLit, DictConfig]:
         raise ValueError(f"Expected exactly one hparams yaml, found {len(hp)}: {hp}")
     hparams = OmegaConf.load(hp[0])
 
-    model = MISTModelLit.load_from_checkpoint(best_ckpt, args=hparams.args)
+    model = MISTModelLit.load_from_checkpoint(best_ckpt, args=hparams.args, weights_only=False)
     model.eval()
     return model, hparams
 
