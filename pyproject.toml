@@ -1,6 +1,6 @@
 [project]
 name = "mist-statinf"
-version = "0.1.0"
+version = "0.1.1"
 description = "Neural mutual information estimators with quantile-based uncertainty"
 readme = "README.md"
 license = { file = "LICENSE" }
