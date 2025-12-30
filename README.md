@@ -4,13 +4,16 @@
 
 **M**utual **I**nformation estimation via **S**upervised **T**raining
 
-[![License](https://img.shields.io/badge/license-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
+[![License](https://img.shields.io/badge/license-MIT-blue)](https://opensource.org/license/mit)
+[![Paper](https://img.shields.io/badge/arXiv-Paper-b31b1b?logo=arxiv&logoColor=b31b1b)](https://arxiv.org/pdf/2511.18945)
+[![Data](https://img.shields.io/badge/Data-Zenodo-%23009788)](https://zenodo.org/records/17599669)
+[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue)](https://huggingface.co/grgera/MIST)
 
 **MIST** is a framework for fully data-driven mutual information (MI) estimation.
 It leverages neural networks trained on large meta-datasets of distributions to learn flexible, differentiable MI estimators that generalize across sample sizes, dimensions, and modalities.
 The framework supports uncertainty quantification via quantile regression and provides fast, well-calibrated inference suitable for integration into modern ML pipelines.
 
-This repository contains the reference implementation for the preprint *"Mutual Information via Supervised Training"*.  It includes scripts to reproduce our experiments as well as tools for training and evaluating MIST-style MI estimators.
+This repository contains the reference implementation for the preprint [*"Mutual Information via Supervised Training"*](https://arxiv.org/pdf/2511.18945).  It includes scripts to reproduce our experiments as well as tools for training and evaluating MIST-style MI estimators.
 
 
 ## Installation
@@ -40,7 +43,9 @@ pip install -e .
 
 ## Quickstart: MI on your (X, Y)
 
-If you want to evaluate MI or obtain confidence intervals on your own data using the **MIST** or **MIST-QR** models described in the paper, use the `MISTQuickEstimator`.
+[2025/12] 🚀 [**MIST**](https://huggingface.co/grgera/MIST) and [**MIST-QR**](https://huggingface.co/grgera/MIST-QR) are now available on 🤗 Hugging Face! For a quick and easy way to integrate our models into your projects, check out the usage guides on the model pages.
+
+Alternatively, you can use our built-in inference wrapper. If you want to evaluate MI or obtain confidence intervals on your own data using the **MIST** or **MIST-QR** models described in the paper, use the `MISTQuickEstimator`.
 
 ### Point MI estimate with a **MIST**
 ```python
@@ -151,14 +156,17 @@ This performs a parameter search (via Optuna) starting from a given training run
 If you use **MIST** or **MIST-QR** in your work, please cite:
 
 ```bibtex
-@article{mist2025,
-  title   = {Mutual Information via Supervised Training},
-  author  = {German Gritsai and Megan Richards and Maxime Meloux and Kyunghyun Cho and Maxime Peyrard},
-  journal = {arXiv preprint arXiv:XXXX.XXXXX},
-  year    = {2025},
+@misc{gritsai2025mistmutualinformationsupervised,
+      title={MIST: Mutual Information Via Supervised Training}, 
+      author={German Gritsai and Megan Richards and Maxime Méloux and Kyunghyun Cho and Maxime Peyrard},
+      year={2025},
+      eprint={2511.18945},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2511.18945}, 
 }
 ```
 
 ## Authors ##
 
-[German Gritsai](https://github.com/), [Megan Richards](https://github.com/meganrichards3), [Maxime Meloux](https://github.com/MelouxM), [Kyunghyun Cho](https://github.com/kyunghyuncho), [Maxime Peyrard](https://github.com/PeyrardM).
+[German Gritsai](https://github.com/grgera/), [Megan Richards](https://github.com/meganrichards3), [Maxime Meloux](https://github.com/MelouxM), [Kyunghyun Cho](https://github.com/kyunghyuncho), [Maxime Peyrard](https://github.com/PeyrardM).
